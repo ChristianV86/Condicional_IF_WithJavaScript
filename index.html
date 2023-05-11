@@ -7,17 +7,44 @@
     <link rel="stylesheet" href="styles.css">
     <title>Condicional IF With JS</title>
 </head>
-<body>    
-    <!-- En este ejemplo el programa evaluará si puedo o no comprarme un carro -->
+<body id="cuerpo">    
+    
     
 <script>
+    // Este ejemplo permitirá que puedas cambiar el fondo de la página
+    var cuerpo=document.getElementById("cuerpo");
+
+    var colorPagina=prompt("¿Cuál de los siguientes colores te gustaría para el fondo?: azul, verde o rojo");
+
+    if (colorPagina=="azul" || colorPagina=="Azul" || colorPagina=="AZUL"){
+        cuerpo.style.backgroundColor="blue";
+    }
+    else if (colorPagina=="verde" || colorPagina=="Verde" || colorPagina=="VERDE"){
+        cuerpo.style.backgroundColor="green";
+    }
+
+    else if (colorPagina=="rojo" || colorPagina=="Rojo" || colorPagina=="ROJO"){
+        cuerpo.style.backgroundColor="red";
+    }
+
+
+
+
+
+
+    // En este ejemplo el programa evaluará si puedo o no comprarme un carro
     // Declaramos las variables que necesitamos para este ejercicio
     var precioCarro = 20000000;
     // Pedimos al usuario que ingrese un valor
     var ahorros=prompt("Ingresar nuevo valor ahorrado");
+    var edad=prompt("Ingresar tu edad");
+    var loteria=prompt("¿Te haz ganado la lotería?")
 
-    //iniciamos la condicion para que el programa la determine y nos informe
-    if (ahorros >= precioCarro){
+    /*iniciamos las condiciones que evaluará el programa
+    * utilizamos los operadores logicos && (Y) y || (O) para que el programa evalue si se cumple o no
+    * una o dos condicines
+    */
+    if (ahorros>=precioCarro && edad>=18 || loteria=="si"){
         alert("¡Felicitaciones! Puedes comprar tu carro");
     }
 
@@ -28,7 +55,6 @@
     alert("Continúa la ejecución del programa");
 
 </script>
-
 
 </body>
 </html>
